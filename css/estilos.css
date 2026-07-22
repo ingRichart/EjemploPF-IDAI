@@ -150,7 +150,7 @@ body{
 #menu-productos .contenedor-principal{
      display: flex;
      align-items: center;
-     position: relative;
+     position: relative; /* 1) Explicar el position relative*/
      z-index: 0;
 }
 
@@ -159,20 +159,26 @@ body{
      position: absolute;
      height: 10%;
      width: 50px;
+     /*2) PAUSA Y mostrar la pagina */
+
      border: none;
      background: transparent;
      cursor: pointer;
      font-size: 40px;
+
      margin: 0 15px;
      color: var(--color-secundario);
+     
      z-index: 500;
      outline: none;
      transition: all 0.3s;
 }
 
+/*3)  Coloca el OVER*/
 .contenedor-principal #btn-izquierda:hover,
 .contenedor-principal #btn-derecha:hover{
      background: var(--color-backgroud-sombra);
+     /*Esto baja 5 px*/
      transform: translateY(5px);
 }
 
@@ -186,17 +192,23 @@ body{
      right: 0;
 }
 
+/*4)  Coloca el slider */
 .slider{
      display: flex;
+
+     /*ESTO SE APLICA LA FINAL*/
      overflow: hidden;
      height: calc(100vh - 80px);
      scroll-behavior: smooth;
+     /*SE APLICA LA FINAL*/
 }
 
 .container-productos{
      display: flex;
+     
      justify-content: center;
      align-items: center;
+     
      flex-basis: 100%;
      flex-shrink: 0;
 }
@@ -206,7 +218,7 @@ body{
 }
 
 .descripcion-productos h1{
-     font-size: 5vw;
+     font-size: 5vw; /*Explicaicon del vw */
      font-weight: 600;
      text-transform: uppercase;
 }
@@ -222,7 +234,6 @@ body{
      font-style: italic;
      text-align: justify;
 }
-
 
 .imagen-productos{
      width: 50%;
